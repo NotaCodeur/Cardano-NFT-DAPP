@@ -11,9 +11,16 @@
   height: 10vmin;
   pointer-events: none;
 }
-
+.walletIcon {
+  height: 3vmin;
+  pointer-events: none;
+}
 @media screen and (max-width: 450px) {
   .logo {
+    height: 5vmin;
+    pointer-events: none;
+  }
+  .walletIcon {
     height: 5vmin;
     pointer-events: none;
   }

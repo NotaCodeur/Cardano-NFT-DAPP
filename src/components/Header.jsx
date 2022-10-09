@@ -207,7 +207,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
                                                 stateTwo.networkId !== undefined ?
                                                     <Button style={{ marginRight: 20, borderRadius: 20 }}>
                                                         <Space >
-                                                            <img src={window.cardano[stateTwo?.whichWalletSelected].icon} style={{ height: '2vmin' }} />
+                                                            <img className='walletIcon' src={window.cardano[stateTwo?.whichWalletSelected].icon} alt="Walletlogo" />
                                                         </Space>
                                                     </Button>
 
@@ -222,7 +222,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
                                                             </Button>
                                                         </Dropdown>
                                                         : stateTwo?.wallets?.length === 1 ?
-                                                            <Button style={{ marginRight: 20, borderRadius: 20 }}>
+                                                            <Button style={{ marginRight: 20, borderRadius: 20 }} onClick={() => { dispatch({ type: 'reload', payload: true });}}>
                                                                 <Space >
                                                                     Connect
                                                                 </Space>
@@ -260,7 +260,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
                                                     stateTwo.networkId !== undefined ?
                                                         <Button style={{ marginRight: 20, borderRadius: 20 }}>
                                                             <Space >
-                                                                <img src={window.cardano[stateTwo?.whichWalletSelected].icon} style={{ height: '2vmin' }} />
+                                                                <img className='walletIcon' src={window.cardano[stateTwo?.whichWalletSelected].icon} alt="Walletlogo" />
                                                             </Space>
                                                         </Button>
 

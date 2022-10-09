@@ -446,11 +446,9 @@ function App() {
     const checkIfWalletFound = () => {
         console.log('checkIfWalletFound()')
         console.log('window.cardano :', window.cardano)
-        console.log('whichWalletSelected :', stateTwo.whichWalletSelected)
+        console.log('stateTwo.whichWalletSelected :', stateTwo.whichWalletSelected)
         const walletKey = stateTwo.whichWalletSelected;
-        console.log('walletKey: ', walletKey)
-        console.log('window?.cardano: ', window?.cardano)
-        console.log('window?.cardano. hasOwnProperty: ', !!window?.cardano?.['nami'])
+        console.log('window?.cardano. hasOwnProperty: ', !!window?.cardano?.[walletKey])
         const walletString = walletKey.toString()
 
         console.log('walletKey.toString(): ', walletString)
@@ -865,7 +863,8 @@ function App() {
     useEffect(() => {
         // pollWallets();
         // refreshData();
-        console.log('useEffect stateTwo.whichWalletSelected', stateTwo.whichWalletSelected)
+        console.log('useEffect stateTwo', stateTwo)
+        // console.log('useEffect stateTwo.whichWalletSelected', stateTwo.whichWalletSelected)
 
     }, [stateTwo])
 

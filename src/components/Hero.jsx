@@ -37,7 +37,7 @@ const Hero = ({state, dispatch}) => {
                 <br />
                 <br />
 
-                <Button size='large' type='primary' block={true} target="_blank" style={{borderRadius: 20}} href='https://github.com/NotaCodeur/nft-page'>
+                <Button size='large' type='primary' block={true} target="_blank" style={{borderRadius: 20}} href='https://github.com/NotaCodeur/Cardano-NFT-DAPP'>
                     Call To Action !
                 </Button>
                 {/* <Row align='center' justify='center'>
