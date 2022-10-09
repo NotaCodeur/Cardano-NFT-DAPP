@@ -6,8 +6,6 @@ import bullLogo from '../images/bullLogo.png'
 import WireframeLogoTransparent from '../images/WireframeLogoTransparent.png'
 import Roadmap from './Roadmap';
 import { Link } from 'react-router-dom';
-var App = require('../App');
-var WalletTest = require('../pages/WalletTest');
 // import App from '../App';
 
 
@@ -44,23 +42,23 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
 
             items={[
                 {
-                    label: <a href="#hero" onClick={() => scrollToSection(state.refs.hero)}>Top</a>,
+                    label: <a href="#hero" href={() => scrollToSection(state.refs.hero)}>Top</a>,
                     key: '0',
                 },
                 {
-                    label: <a onClick={() => scrollToSection(state.refs.roadmap)}>Roadmap</a>,
+                    label: <a href={() => scrollToSection(state.refs.roadmap)}>Roadmap</a>,
                     key: '1',
                 },
                 {
-                    label: <a onClick={() => scrollToSection(state.refs.art)}>Art</a>,
+                    label: <a href={() => scrollToSection(state.refs.art)}>Art</a>,
                     key: '2',
                 },
                 {
-                    label: <a onClick={() => scrollToSection(state.refs.team)}>Team</a>,
+                    label: <a href={() => scrollToSection(state.refs.team)}>Team</a>,
                     key: '3',
                 },
                 {
-                    label: <a onClick={() => scrollToSection(state.refs.faq)}>Faq</a>,
+                    label: <a href={() => scrollToSection(state.refs.faq)}>Faq</a>,
                     key: '4 ',
                 },
                 {
@@ -107,15 +105,15 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
             console.log('wallet menu stateTwo.wallets.length === -1:', stateTwo.wallets.length)
             items = [
                 {
-                    label: <a href="https://namiwallet.io/" target="_blank" >Nami</a>,
+                    label: <a href="https://namiwallet.io/" target="_blank" rel="noreferrer" >Nami</a>,
                     key: '0',
                 },
                 {
-                    label: <a href="https://flint-wallet.com/" target="_blank" >Flint</a>,
+                    label: <a href="https://flint-wallet.com/" target="_blank" rel="noreferrer" >Flint</a>,
                     key: '1',
                 },
                 {
-                    label: <a href="https://eternl.io/" target="_blank" >Eternl</a>,
+                    label: <a href="https://eternl.io/" target="_blank" rel="noreferrer" >Eternl</a>,
                     key: '2',
                 }
             ]
