@@ -53,7 +53,7 @@ let Buffer = require('buffer/').Buffer
 let blake = require('blakejs')
 
 
-export default class App extends React.Component
+export default class WalletTest extends React.Component
 {
     constructor(props)
     {
