@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+.logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
 .wallets-wrapper {
   display: flex;
 }
