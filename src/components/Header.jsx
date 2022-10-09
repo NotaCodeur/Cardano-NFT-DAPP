@@ -115,6 +115,10 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
                 {
                     label: <a href="https://eternl.io/" target="_blank" rel="noreferrer" >Eternl</a>,
                     key: '2',
+                },
+                {
+                    label: <a href="https://gerowallet.io/" target="_blank" rel="noreferrer" >Gero</a>,
+                    key: '3',
                 }
             ]
         } else if (stateTwo.wallets.length === 1) {
@@ -183,7 +187,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
         //     />
         // </Header>
         <>
-            <div style={{ maxHeight: '15vh' }}>
+            <div className='headerDiv' style={{ maxHeight: '15vh' }}>
                 <Row justify="center">
                     <Col></Col>
                     <Col xs={22} sm={22} md={22} lg={20} xl={20}>
@@ -197,14 +201,56 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
                                 <div style={{ height: '100%', alignContent: 'middle' }}>
                                     {activeMenu ? (
 
-                                        <Dropdown overlay={menu} trigger={['click']} >
-                                            <a onClick={(e) => { e.preventDefault() }}>
-                                                <Space>
-                                                    Menu
-                                                    <DownOutlined />
-                                                </Space>
-                                            </a>
-                                        </Dropdown>
+                                        <Row align='middle' justify='space-around' >
+                                            {
+
+                                                stateTwo.networkId !== undefined ?
+                                                    <Button style={{ marginRight: 20, borderRadius: 20 }}>
+                                                        <Space >
+                                                            <img src={window.cardano[stateTwo?.whichWalletSelected].icon} style={{ height: '2vmin' }} />
+                                                        </Space>
+                                                    </Button>
+
+                                                    :
+                                                    stateTwo?.wallets?.length === 0 ?
+                                                        <Dropdown overlay={walletMenu} placement="bottomRight">
+                                                            <Button style={{ marginRight: 20, borderRadius: 20 }}>
+                                                                <Space >
+                                                                    Install a wallet
+                                                                    <DownOutlined />
+                                                                </Space>
+                                                            </Button>
+                                                        </Dropdown>
+                                                        : stateTwo?.wallets?.length === 1 ?
+                                                            <Button style={{ marginRight: 20, borderRadius: 20 }}>
+                                                                <Space >
+                                                                    Connect
+                                                                </Space>
+
+                                                            </Button>
+
+                                                            : stateTwo?.wallets?.length >= 1 ?
+                                                                <Dropdown overlay={walletMenu} placement="bottomRight">
+                                                                    <Button style={{ marginRight: 20, borderRadius: 20 }}>
+                                                                        <Space >
+                                                                            Connect wallet
+                                                                            <DownOutlined />
+                                                                        </Space>
+                                                                    </Button>
+                                                                </Dropdown>
+                                                                : null
+
+
+                                            }
+                                            <Dropdown overlay={menu} placement="bottomRight">
+                                                <a onClick={(e) => { e.preventDefault() }}>
+                                                    <Space>
+                                                        Menu
+                                                        <DownOutlined />
+                                                    </Space>
+                                                </a>
+                                            </Dropdown>
+                                        </Row>
 
                                     )
                                         : activeMenu === false ? (
