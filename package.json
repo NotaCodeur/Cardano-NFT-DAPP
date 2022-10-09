@@ -6,7 +6,7 @@
     "@ant-design/icons": "^4.7.0",
     "@blueprintjs/core": "^4.11.2",
     "@blueprintjs/icons": "^3.32.0",
-    "@emurgo/cardano-serialization-lib-asmjs": "^10.0.4-beta.4",
+    "@emurgo/cardano-serialization-lib-asmjs": "^10.2.0",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/user-event": "^13.5.0",
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts --max-old-space-size=8192 start",
-    "build": "set CI=true && react-scripts --max-old-space-size=8192 build",
+    "build": "set CI=true &&  react-scripts --max-old-space-size=8192 build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
