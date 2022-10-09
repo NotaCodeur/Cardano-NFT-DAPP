@@ -42,7 +42,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
 
             items={[
                 {
-                    label: <a href="#hero" href={() => scrollToSection(state.refs.hero)}>Top</a>,
+                    label: <a href={() => scrollToSection(state.refs.hero)}>Top</a>,
                     key: '0',
                 },
                 {
