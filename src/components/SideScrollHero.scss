@@ -1,0 +1,226 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:800,200);
+
+$font-size: 280px;
+$bg-color: #1e2134;
+$text-color: #30442a;
+
+.sideScrollHeroSection {
+    height: 70vh;
+
+}
+
+.bodyScrollHero {
+    font-family: montserrat;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    background: $bg-color;
+
+    line-height: .7;
+    color: #fff;
+
+    transform: skewY(-3deg);
+
+}
+
+.bg-text-container {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+@keyframes text-scrolling {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}
+
+.animate-text {
+    animation: text-scrolling 20s linear infinite;
+    will-change: transform;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+
+    &.left {
+        animation-direction: reverse;
+        padding-top: 20%;
+    }
+
+}
+
+.spanScollHero {
+    font-size: $font-size;
+    color: transparent;
+    -webkit-text-stroke: 2px $text-color;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 0.75;
+    min-width: auto;
+    font-weight: 800;
+}
+
+.buttonScrollHero {
+    position: relative;
+    font-family: montserrat;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    /* height: 80px; */
+    /* width: 80px; */
+    background: #18191f;
+    color: #555;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 20px;
+    box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+        4px 4px 6px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+        inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.sideHeroTextcontainer {
+    direction: ltr;
+    position: relative;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    transform: skewY(-3deg);
+}
+
+.colScrollHero {
+    padding-top: 150px;
+    // max-width: 600px;
+    // margin: 0;
+}
+
+.colTwoScrollHero {
+    padding-top: 100px;
+    // padding-left: 50px;
+    // max-width: 600px;
+    padding-bottom: 100px;
+    // margin: 0;
+}
+
+
+.h1ScrollHero {
+    color: lightgray;
+    font-size: 90px;
+    margin: 0;
+}
+
+.pcolScrollHero {
+    color: lightgray;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .h1ScrollHero {
+        font-size: 60px;
+    }
+
+    .colScrollHero {
+        padding-left: 40px;
+    }
+
+    .colTwoScrollHero {
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .h1ScrollHero {
+        font-size: 50px;
+    }
+
+    .colTwoScrollHero {
+        padding-top: 200px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+
+    .colScrollHero {
+        padding-top: 00px;
+        // max-width: 600px;
+        // margin: 0;
+    }
+
+    .colTwoScrollHero {
+        padding-top: 00px;
+        // padding-left: 50px;
+        // max-width: 600px;
+        padding-bottom: 00px;
+        // margin: 0;
+    }
+
+    .sideScrollHeroSection {
+        height: 140vh;
+
+    }
+
+    .bodyScrollHero {
+        height: 140vh;
+        display: flex;
+        align-items: center;
+        background: $bg-color;
+        line-height: 1.7;
+        color: #fff;
+        transform: skewY(-3deg);
+    }
+
+    .animate-text {
+        animation: text-scrolling 20s linear infinite;
+        will-change: transform;
+        display: block;
+        position: relative;
+        white-space: nowrap;
+        padding-bottom: 100%;
+
+        &.left {
+            animation-direction: reverse;
+            padding-top: 100%;
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .h1ScrollHero {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .h1ScrollHero {
+        font-size: 40px;
+    }
+}

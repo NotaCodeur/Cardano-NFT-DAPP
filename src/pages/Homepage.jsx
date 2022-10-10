@@ -2,10 +2,12 @@ import React, { useState, useEffect, Component, useMemo, useCallback, useReducer
 import HeaderSection from '../components/Header';
 import logo from '../logo.svg';
 import Hero from '../components/Hero';
+import SideScrollHero from '../components/SideScrollHero';
 import Roadmap from '../components/Roadmap';
 import Faq from '../components/Faq';
 import Art from '../components/Art';
 import Team from '../components/Team';
+
 import { BackTop } from 'antd';
 
 const Homepage = ({state, dispatch, stateTwo, dispatchTwo}) => {
@@ -17,7 +19,7 @@ const Homepage = ({state, dispatch, stateTwo, dispatchTwo}) => {
     <div >
       <BackTop />
       <HeaderSection state={state} dispatch={dispatch} stateTwo={stateTwo} dispatchTwo={dispatchTwo} />
-
+      <SideScrollHero />
       <Hero state={state} dispatch={dispatch} />
       <Roadmap state={state} dispatch={dispatch} />
       <Art state={state} dispatch={dispatch}  />
