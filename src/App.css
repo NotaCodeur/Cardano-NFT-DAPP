@@ -15,19 +15,23 @@
   height: 10vmin;
   pointer-events: none;
 }
+
 .walletIcon {
   height: 3vmin;
   pointer-events: none;
 }
+
 @media screen and (max-width: 450px) {
   .logo {
     height: 5vmin;
     pointer-events: none;
   }
+
   .walletIcon {
     height: 5vmin;
     pointer-events: none;
   }
+
   .headerDiv {
     padding-top: 3vmin;
   }
@@ -50,6 +54,20 @@
   color: #272727;
   overflow: hidden;
   text-align: center;
+}
+
+
+
+.ant-dropdown-menu-item .ant-dropdown-menu-submenu-title {
+  /* margin-top: 10; */
+  /* margin-right: 0; */
+  border-radius: 20 !important;
+  /* background: rgba(255, 255, 255, 0.09); */
+  /* border-radius: 16px; */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  /* backdrop-filter: blur(6px); */
+  /* -webkit-backdrop-filter: blur(6px); */
+  /* border: 1px solid rgba(255, 255, 255, 0.64); */
 }
 
 @media (prefers-reduced-motion: no-preference) {

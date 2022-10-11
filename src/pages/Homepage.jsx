@@ -19,7 +19,7 @@ const Homepage = ({state, dispatch, stateTwo, dispatchTwo}) => {
     <div >
       <BackTop />
       <HeaderSection state={state} dispatch={dispatch} stateTwo={stateTwo} dispatchTwo={dispatchTwo} />
-      <SideScrollHero />
+      {/* <SideScrollHero /> */}
       <Hero state={state} dispatch={dispatch} />
       <Roadmap state={state} dispatch={dispatch} />
       <Art state={state} dispatch={dispatch}  />

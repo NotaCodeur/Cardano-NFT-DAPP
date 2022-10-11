@@ -69,6 +69,10 @@ $text-color: #30442a;
 }
 
 .buttonScrollHero {
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    
     position: relative;
     font-family: montserrat;
 
@@ -79,7 +83,7 @@ $text-color: #30442a;
 
     /* height: 80px; */
     /* width: 80px; */
-    background: #18191f;
+    background: #18191f63;
     color: #555;
     display: flex;
     display: flex;
@@ -93,6 +97,48 @@ $text-color: #30442a;
         4px 4px 6px rgba(0, 0, 0, 0.2),
         inset -1px -1px 4px rgba(255, 255, 255, 0.05),
         inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.buttonScrollHero:hover {
+
+    background: rgba(255, 255, 255, 0.09);
+    // border-radius: 16px;
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    // border: 1px solid rgba(255, 255, 255, 0.64);
+
+
+    position: relative;
+    font-family: montserrat;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    /* height: 80px; */
+    /* width: 80px; */
+    
+    // background: #8086a7;
+    color: #555;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 20px;
+    box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+        4px 4px 6px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+        inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.buttonScrollHero:active {
+
+    background: rgba(243, 218, 218, 0.24);
+    
 }
 
 

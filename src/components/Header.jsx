@@ -6,6 +6,7 @@ import bullLogo from '../images/bullLogo.png'
 import WireframeLogoTransparent from '../images/WireframeLogoTransparent.png'
 import Roadmap from './Roadmap';
 import { Link } from 'react-router-dom';
+import '../App.css'
 // import App from '../App';
 
 
@@ -38,7 +39,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
 
     const menu = (
         <Menu
-            style={{ marginTop: 10, marginRight: 0, borderRadius: 20 }}
+            style={{ marginTop: 10, marginRight: 0, borderRadius: 10 }}
 
             items={[
                 {
@@ -74,7 +75,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
 
     const menu2 = (
         <Menu
-            style={{ marginTop: 10, marginRight: 0, borderRadius: 20 }}
+            style={{ marginTop: 10, marginRight: 0, borderRadius: 10 }}
             items={[
                 {
                     label: <a href="#hero" >Nami</a>,
@@ -129,18 +130,39 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
             }))
         } else if (stateTwo.wallets.length >= 1) {
             console.log('wallet menu stateTwo.wallets.length >= 1:', stateTwo.wallets.length)
-            stateTwo?.wallets?.forEach((wallet, index) => items.push({
-                label: <a onClick={(e) => {
+            stateTwo?.wallets?.forEach((wallet, index) => items.push(
+                // <MenuItem className="no-border" key={index}>
+                //     <button
+                //         style={{ borderRadius: 20 }}
+                //         onClick={(e) => {
 
-                    if (stateTwo.whichWalletSelected === wallet) {
-                        console.log('stateTwo.whichWalletSelected === wallet')
-                        dispatch({ type: 'reload', payload: true });
-                    };
+                //             if (stateTwo.whichWalletSelected === wallet) {
+                //                 console.log('stateTwo.whichWalletSelected === wallet')
+                //                 dispatch({ type: 'reload', payload: true });
+                //             };
 
-                    dispatchTwo({ type: 'setwhichWalletSelected', payload: wallet });
-                }} >{wallet}</a>,
-                key: index,
-            }))
+                //             dispatchTwo({ type: 'setwhichWalletSelected', payload: wallet });
+                //         }} >{wallet}</button>
+                // </MenuItem>
+
+
+                {
+                    label: <a
+                        style={{ borderRadius: 10 }}
+                        onClick={(e) => {
+
+                            if (stateTwo.whichWalletSelected === wallet) {
+                                console.log('stateTwo.whichWalletSelected === wallet')
+                                dispatch({ type: 'reload', payload: true });
+                            };
+
+                            dispatchTwo({ type: 'setwhichWalletSelected', payload: wallet });
+                        }} >{wallet}</a>,
+                    key: index,
+                }
+
+
+            ))
         } else {
             console.log('wallet menu else idunno what happend:', stateTwo.wallets.length)
         }
@@ -152,7 +174,18 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
         // console.log('wallet menu items :', items)
         return (
             <Menu
-                style={{ marginTop: 10, marginRight: 0, borderRadius: 20 }}
+                className='selectWalletMenu'
+                style={{
+                    marginTop: 10,
+                    marginRight: 0,
+                    borderRadius: 10,
+                    background: 'rgba(255, 255, 255, 0.09)',
+                    /* border-radius: 16px; */
+                    // boxShadow: 0 4px 30px rgba(0, 0, 0, 0.1),
+                    backdropFilter: `blur(6px)`,
+                    webkitBackdropFilter: `blur(6px)`,
+                    // border: 1px solid rgba(255, 255, 255, 0.64)
+                }}
                 items={items}
             />
         )
@@ -222,7 +255,7 @@ const HeaderSection = ({ state, dispatch, stateTwo, dispatchTwo }) => {
                                                             </Button>
                                                         </Dropdown>
                                                         : stateTwo?.wallets?.length === 1 ?
-                                                            <Button style={{ marginRight: 20, borderRadius: 20 }} onClick={() => { dispatch({ type: 'reload', payload: true });}}>
+                                                            <Button style={{ marginRight: 20, borderRadius: 20 }} onClick={() => { dispatch({ type: 'reload', payload: true }); }}>
                                                                 <Space >
                                                                     Connect
                                                                 </Space>
